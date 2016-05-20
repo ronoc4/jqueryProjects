@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fun with jQuery</title>
+
+    <!--Google hosted link to jQuery lib -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Locally hosted jQuery lib and Animate CSS lib-->
+    <script src="jquery-2.2.4.min.js"></script>
+   <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+<script>
+    //jQuery to add new class to .well
+    $(document).ready(function () {
+        $("button").addClass("animated bounce"); //buttons will all bounce
+        $(".well").addClass("animate shake"); // the divs will now shake
+        $("#target3").addClass("animated fadeOut"); //#target3 will fade out of view
+        $("#target1").css("color", "red"); //Change the CSS of an element
+
+        $("#target2").prop("disabled", true); //Disable property on page
+
+        $("#target4").text("New button Text!"); //Change text on page
+    });
+</script>
+
+<div class="container-fluid">
+    <h3 class="text-primary text-center">Conor's jQuery Playground</h3>
+    <div class="row">
+        <div class="col-xs-6">
+            <h4>#left-well</h4>
+            <div class="well" id="left-well">
+                <button class="btn btn-default target" id="target1">#target1</button>
+                <button class="btn btn-default target" id="target2">#target2</button>
+                <button class="btn btn-default target" id="target3">#target3</button>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <h4>#right-well</h4>
+            <div class="well" id="right-well">
+                <button class="btn btn-default target" id="target4">#target4</button>
+                <button class="btn btn-default target" id="target5">#target5</button>
+                <button class="btn btn-default target" id="target6">#target6</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
