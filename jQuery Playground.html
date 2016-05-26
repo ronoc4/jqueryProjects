@@ -27,16 +27,22 @@
         $("button").addClass("animated bounce"); //buttons will all bounce
         $(".well").addClass("animate shake"); // the divs will now shake
         $("#target3").addClass("animated fadeOut"); //#target3 will fade out of view
-        $("#target1").css("color", "red"); //Change the CSS of an element
+       // $("#target1").css("color", "red"); //Change the CSS of an element
 
         $("#target2").prop("disabled", true); //Disable property on page
 
         $("#target4").text("New button Text!"); //Change text on page
+
+        $("#target6").appendTo("#left-well");
+        $("#target5").remove(); // Remove an element
+        $("#left-well").children().css("color", "orange"); // Change Children elements CSS
+        $('#target1').parent().css("background-color", "red"); // Target Parent element of ID
+
     });
 </script>
 
-<div class="container-fluid">
-    <h3 class="text-primary text-center">Conor's jQuery Playground</h3>
+<<div class="container-fluid">
+    <h3 class="text-primary text-center">jQuery Playground</h3>
     <div class="row">
         <div class="col-xs-6">
             <h4>#left-well</h4>
@@ -56,6 +62,6 @@
         </div>
     </div>
 </div>
-
 </body>
+
 </html>
